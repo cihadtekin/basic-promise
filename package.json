@@ -1,0 +1,22 @@
+{
+  "name": "t-promise",
+  "version": "1.0.0",
+  "description": "Basic promise library; native-like but more flexible",
+  "main": "t-promise.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cihadtekin/t-promise.git"
+  },
+  "keywords": [
+    "promise"
+  ],
+  "author": "Cihad Tekin <cihadtekin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cihadtekin/t-promise/issues"
+  },
+  "homepage": "https://github.com/cihadtekin/t-promise#readme"
+}
