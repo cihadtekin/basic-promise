@@ -1,6 +1,6 @@
 "use strict"
 
-class BasicPromise {
+class TPromise {
 
   constructor(executor) {
     this.status = "pending"
@@ -25,7 +25,7 @@ class BasicPromise {
 
     this.status !== "pending" && this.fulfil()
 
-    return this;
+    return this
   }
 
   catch(onReject) {
@@ -36,7 +36,7 @@ class BasicPromise {
 
     this.status !== "pending" && this.fulfil()
 
-    return this;
+    return this
   }
 
   resolve(...args) {
@@ -64,7 +64,7 @@ class BasicPromise {
       if (item.type === this.status) {
         ret = item.cb(...this.args)
 
-        if (ret instanceof BasicPromise) {
+        if (ret instanceof TPromise) {
           ret.callbackQueue = ret.callbackQueue.concat(this.callbackQueue)
           this.callbackQueue = []
 
@@ -75,23 +75,23 @@ class BasicPromise {
       }
     }
 
-    return this;
+    return this
   }
 
   static resolve() {
-    return BasicPromise.create().resolve()
+    return TPromise.create().resolve()
   }
 
   static reject() {
-    return BasicPromise.create().reject()
+    return TPromise.create().reject()
   }
 
   static create(executor) {
-    return new BasicPromise(executor);
+    return new TPromise(executor)
   }
 
 }
 
 if (module && module.exports) {
-  module.exports = BasicPromise;
+  module.exports = TPromise
 }
