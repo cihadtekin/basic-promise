@@ -1,6 +1,6 @@
 {
   "name": "t-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic promise library; native-like but more flexible",
   "main": "t-promise.js",
   "scripts": {
